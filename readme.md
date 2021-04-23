@@ -16,7 +16,7 @@ make install
 [TensorFlow 2 quickstart for experts](https://www.tensorflow.org/tutorials/quickstart/advanced)
 
 ```shell
-make quickstart
+make mnist
 ```
 
 
