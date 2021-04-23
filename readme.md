@@ -5,12 +5,6 @@
   </p>
 </div>
 
-## Deps
-
-```shell
-make install
-```
-
 ## Run
 
 [TensorFlow 2 quickstart for experts](https://www.tensorflow.org/tutorials/quickstart/advanced)
