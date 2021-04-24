@@ -19,3 +19,15 @@ make mnist
 ```shell
 make clean
 ```
+
+### Run CI local
+
+Installation [act](https://github.com/nektos/act):
+```shell
+brew install act
+```
+
+Run
+```shell
+act --help
+```

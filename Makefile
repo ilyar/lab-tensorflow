@@ -5,24 +5,20 @@
 # 3 = INFO, WARNING, and ERROR messages are not printed
 export TF_CPP_MIN_LOG_LEVEL=3
 
-venv-activate: venv
-	. venv/bin/activate
-
 venv:
-	pip install virtualenv
-	virtualenv venv
-	. venv/bin/activate; pip install -Ur requirements.txt
+	python3 -m venv venv
+	. venv/bin/activate; if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-freeze: venv-activate
-	pip freeze > requirements.txt
+freeze: venv
+	. venv/bin/activate; pip freeze > requirements.txt
 
 test:\
-mnist
+src/mnist
 
 clean:
 	rm -rf venv
 
-src/%: venv-activate
-	python src/$*.py
+src/%: venv
+	. venv/bin/activate; python src/$*.py
 
 mnist: src/mnist
