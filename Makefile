@@ -13,12 +13,16 @@ freeze: venv
 	. venv/bin/activate; pip freeze > requirements.txt
 
 test:\
+src/weather\
 src/mnist
 
 clean:
 	rm -rf venv
+	rm -rf build
 
 src/%: venv
+	mkdir -p build
 	. venv/bin/activate; python src/$*.py
 
 mnist: src/mnist
+weather: src/weather
