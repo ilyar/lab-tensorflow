@@ -13,6 +13,11 @@
 make mnist
 ```
 
+[Time series forecasting](https://www.tensorflow.org/tutorials/structured_data/time_series)
+
+```shell
+make weather
+```
 
 ## Clean
 
